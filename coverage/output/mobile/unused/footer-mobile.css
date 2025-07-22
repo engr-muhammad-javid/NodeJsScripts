@@ -1,0 +1,73 @@
+.ul-nostyle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Button
+ */
+/**
+ * Remove color name product
+ */
+/**
+ * Icomoon mixin
+ */
+/**
+ * Footer mobile
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-block .ft-mobile-block.active .block-content {
+  display: block;
+}
+.footer-block .ft-mobile-block.active .block-title {
+  border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+}
+.footer-block .ft-mobile-block.active .block-title:after {
+  content: '\e931';
+  display: inline-block;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-block .ft-mobile-block .block-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+.footer-block .ft-mobile-block .block-content ul li a {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+

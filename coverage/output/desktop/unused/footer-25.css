@@ -1,0 +1,82 @@
+.ul-nostyle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Button
+ */
+/**
+ * Remove color name product
+ */
+/**
+ * Icomoon mixin
+ */
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.footer-service {
+  background: #fff;
+  padding: 38px 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.footer-service .item .info h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 16px 0 10px;
+  color: #111111;
+  font-size: 1.6rem;
+}
+.footer-service .item .info p {
+  margin: 0px;
+}
+
+
+
+
+
+.footer-block .footer-block-content.footer-app ul {
+  display: flex;
+  align-items: center;
+}
+.footer-block .footer-block-content.footer-app ul li {
+  margin-left: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Boxed layout
+ */
+@media (max-width: 991px) {
+  .footer-service .item {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 560px) {
+  .social-block-list ul li {
+    margin: 0 5px;
+  }
+}

@@ -1,0 +1,22 @@
+@media (max-width:767px) {
+    .page-layout-2columns-right.catalog-product-view .page-main {
+        padding-bottom: 10px
+    }
+
+    .product.media {
+        margin-bottom: 20px !important
+    }
+}
+
+.product.media {
+    position: relative
+}
+
+.product-info-main .product-reviews-summary .reviews-actions {
+    font-size: 100%
+}
+
+.product-info-main .page-title-wrapper .page-title {
+    text-transform: unset;
+    font-weight: 700
+}

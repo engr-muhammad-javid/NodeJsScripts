@@ -1,0 +1,9 @@
+.breadcrumbs .items,.breadcrumbs a{color:#4a4a4a!important}
+.breadcrumbs a{text-decoration:none!important}.product-info-main .stock-status span,.products-grid .stock-available span{color:green!important}
+small.copyright{color:#fff!important}
+.listing-prod-detail table tr td:first-child{width:50%;color:#000;font-weight:600}.listing-prod-detail table td{padding:2px 0;font-size:12px;font-weight:400;line-height:15.2px}.listing-prod-detail table td a{color:#428dc1}
+.products-grid .product-item-details .call-us{color:red;font-size:11px;font-weight:600}.products-grid .product-item-details .call-num{color:#000;font-weight:600;font-size:12px}.products-grid .product-item-info .product-item-details .product-item-inner .listing-quote-btn{background-color:#ff2020;border-radius:1px;border:none;color:#fff;font-size:12px;font-weight:700;width:155px;height:40px}.products-grid .stock-available span{font-weight:600;line-height:12px}
+.products-grid .product-item-name a{display:inline-block;font-size:14px;font-weight:700;line-height:16px;color:#231f20}.products-grid .product-item-name{font-size:107.69%;padding-top:10px;font-weight:400;white-space:normal;text-overflow:ellipsis;display:block;margin-bottom:12px;line-height:16px;height:40px}.products-grid .product-item-info{background-color:#fff;height:100%;width:100%;position:relative;padding-bottom:62px;border:1px solid #e1e1e1}.products-grid .product-item-details .listing_page_price{float:none;width:100%;margin:16px 0 25px;line-height:15px}
+.fieldset:last-child,.page-layout-2columns-right .product-info-main,.page-layout-2columns-right .product.media{width:100%!important}
+.fieldset:last-child{margin:0!important;display:flex!important}
+.list-megamenu-items>li .icon_items{display:inline-block!important}

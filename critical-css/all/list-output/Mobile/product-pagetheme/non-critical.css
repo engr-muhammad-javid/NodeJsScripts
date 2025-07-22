@@ -1,0 +1,99 @@
+@media (max-width:767px) {
+    .page-layout-2columns-left.catalog-product-view .page-main {
+        padding-bottom: 10px
+    }
+
+    .product.info.detailed .product.data.items {
+        margin-bottom: 30px
+    }
+}
+
+.service-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.service-sidebar ul li {
+    margin: 0
+}
+
+.service-sidebar ul li a {
+    display: block;
+    padding: 10px 0
+}
+
+.service-sidebar ul li a:after {
+    content: "";
+    display: block !important;
+    clear: both
+}
+
+.service-sidebar ul li a span {
+    display: block
+}
+
+.service-sidebar ul li a .service-image {
+    width: 69px;
+    float: left
+}
+
+.service-sidebar ul li a .service-info {
+    margin-left: 80px;
+    padding-top: 16px
+}
+
+.service-sidebar ul li:not(:last-child) {
+    border-bottom: 1px dashed #e5e5e5
+}
+
+.product.data.items.accordion-style .item.title.resp-accordion a:after {
+    float: right;
+    vertical-align: middle;
+    position: relative;
+    top: -5px;
+    color: #666;
+    content: '\e94f';
+    display: inline-block;
+    font-family: icomoon !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-size: 21px
+}
+
+.product.data.items.accordion-style .item.title.resp-accordion {
+    padding: 12px 20px !important;
+    background-color: #fff
+}
+
+.product.data.items.accordion-style .item.title.resp-accordion a {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222
+}
+
+.product-info-main .product-social-links {
+    float: left;
+    width: unset;
+    vertical-align: top
+}
+
+.sidebar .block .block-content,
+.sidebar .block .empty {
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px
+}
+
+.sidebar .block {
+    margin-bottom: 30px !important
+}
