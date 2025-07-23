@@ -20,7 +20,11 @@ const cssUrlsDesktop = [
 const cssUrlsMobile = [
   'https://miatlantic.co.uk/static/version1753103996/frontend/Sm/smtheme_mobile/en_US/css/product-style-m.css',
   'https://miatlantic.co.uk/static/version1753103996/frontend/Sm/smtheme_mobile/en_US/css/product-pagetheme.css',
-  'https://miatlantic.co.uk/static/version1753103996/frontend/Sm/smtheme_mobile/en_US/css/product-bootstrap.css'
+  'https://miatlantic.co.uk/static/version1753103996/frontend/Sm/smtheme_mobile/en_US/css/product-bootstrap.css',
+  'https://miatlantic.co.uk/media/sm/configed_css/settings_default.css',
+  'https://miatlantic.co.uk/static/version1753185782/frontend/Sm/smtheme_mobile/en_US/css/custom_style_co_uk_mobile.css',
+  'https://miatlantic.co.uk/static/version1753185782/frontend/Sm/smtheme_mobile/en_US/css/header-mobile.css',
+  
 ];
 
 async function generateCritical(cssUrls, deviceLabel) {

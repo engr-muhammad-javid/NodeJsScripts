@@ -374,7 +374,9 @@ print {
     }
 
     .abs-add-box-sizing-desktop,
-    .sidebar-additional {
+    .column.main,
+    .sidebar-additional,
+    .sidebar-main {
         box-sizing: border-box
     }
 
@@ -507,11 +509,18 @@ print {
         float: left
     }
 
+    h1 {
+        font-size: 40px;
+        margin-bottom: 46px
+    }
+
     .block.category.event,
+    .breadcrumbs,
     .footer.content,
     .header.content,
     .navigation,
     .page-header .header.panel,
+    .page-main,
     .page-wrapper>.page-bottom,
     .page-wrapper>.widget,
     .top-container {
@@ -522,6 +531,18 @@ print {
         padding-left: 0;
         padding-right: 0;
         width: auto
+    }
+
+    .page-main {
+        width: 100%
+    }
+
+    .columns {
+        display: block
+    }
+
+    .column.main {
+        min-height: 300px
     }
 
     .page-layout-1column .column.main {
@@ -547,6 +568,18 @@ print {
         order: 2
     }
 
+    .page-layout-2columns-right .column.main {
+        width: 83.33333333%;
+        float: left;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1
+    }
+
+    .sidebar-main {
+        padding-right: 2%
+    }
+
     .page-layout-3columns .sidebar-main {
         width: 16.66666667%;
         float: left;
@@ -561,6 +594,19 @@ print {
         -ms-flex-order: 1;
         -webkit-order: 1;
         order: 1
+    }
+
+    .page-layout-2columns-right .sidebar-main {
+        width: 16.66666667%;
+        float: left;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1
+    }
+
+    .page-layout-2columns-right .sidebar-main {
+        padding-left: 2%;
+        padding-right: 0
     }
 
     .sidebar-additional {
@@ -927,6 +973,25 @@ print {
         display: inline-block
     }
 
+    .fieldset>.field {
+        margin: 0 0 29px
+    }
+
+    .product.data.items {
+        position: relative;
+        z-index: 1
+    }
+
+    .product.data.items:after,
+    .product.data.items:before {
+        content: '';
+        display: table
+    }
+
+    .product.data.items:after {
+        clear: both
+    }
+
     .product.data.items>.item.title {
         float: left;
         width: auto
@@ -1021,10 +1086,25 @@ print {
         border-top: 1px solid #d1d1d1
     }
 
+    .actions-toolbar:after,
+    .actions-toolbar:before {
+        content: '';
+        display: table
+    }
+
+    .actions-toolbar:after {
+        clear: both
+    }
+
+    .actions-toolbar .primary {
+        float: left
+    }
+
     .actions-toolbar .secondary {
         float: right
     }
 
+    .actions-toolbar .primary,
     .actions-toolbar .secondary {
         display: inline-block
     }
@@ -1034,14 +1114,20 @@ print {
         display: inline-block
     }
 
+    .actions-toolbar .primary .action {
+        margin: 0 5.75px 0 0
+    }
+
     .actions-toolbar .secondary a.action {
         margin-top: 6px
     }
 
+    .actions-toolbar>.primary,
     .actions-toolbar>.secondary {
         margin-bottom: 0
     }
 
+    .actions-toolbar>.primary .action,
     .actions-toolbar>.secondary .action {
         margin-bottom: 0;
         width: auto
@@ -1306,6 +1392,10 @@ print {
         vertical-align: bottom
     }
 
+    .product-info-main .page-title-wrapper .page-title {
+        margin-top: -13px
+    }
+
     .sidebar .product-items .product-item-info .product-item-photo {
         float: left;
         left: auto;
@@ -1322,6 +1412,15 @@ print {
         clear: left
     }
 
+    .product-info-main {
+        float: right
+    }
+
+    .product.media {
+        float: left;
+        margin-bottom: 28.75px
+    }
+
     .page-layout-1column .product-info-main {
         width: 40%
     }
@@ -1331,11 +1430,13 @@ print {
     }
 
     .page-layout-2columns-left .product-info-main,
+    .page-layout-2columns-right .product-info-main,
     .page-layout-3columns .product-info-main {
         width: 48%
     }
 
     .page-layout-2columns-left .product.media,
+    .page-layout-2columns-right .product.media,
     .page-layout-3columns .product.media {
         width: 50%
     }
@@ -2140,6 +2241,7 @@ print {
         margin-bottom: 23px
     }
 
+    .page-wrapper>.breadcrumbs,
     .page-wrapper>.top-container,
     .page-wrapper>.widget {
         box-sizing: border-box;
@@ -2412,6 +2514,10 @@ print {
     .ambrands-popup-items .ambrands-letter .ambrands-brand-item .ambrands-empty {
         font-weight: 400;
         font-size: 40px
+    }
+
+    .products-grid .product-item {
+        width: 20%
     }
 
     .page-layout-1column .products-grid .product-item {

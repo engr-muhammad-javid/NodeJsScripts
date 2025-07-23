@@ -1,0 +1,15 @@
+.header-container .hotline-shop {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #222;
+    padding-top: 5px
+}
+
+.product-qoute-form input {
+    border: 1px solid #ccc !important;
+    margin-bottom: 10px;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px
+}

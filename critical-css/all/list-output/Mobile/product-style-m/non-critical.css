@@ -252,21 +252,6 @@ address {
     order: 1
 }
 
-.loading-mask {
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, .5)
-}
-
-[data-role=main-css-loader] {
-    display: none
-}
-
 .fieldset {
     border: 0;
     margin: 0 0 20px;

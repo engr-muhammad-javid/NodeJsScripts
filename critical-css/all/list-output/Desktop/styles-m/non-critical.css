@@ -48,7 +48,8 @@ b {
     font-weight: 700
 }
 
-em {
+em,
+i {
     font-style: italic
 }
 
@@ -89,12 +90,28 @@ dfn {
     font-style: italic
 }
 
+h1 {
+    font-weight: 300;
+    line-height: 1.1;
+    font-size: 2.6rem;
+    margin-top: 0;
+    margin-bottom: 2.3rem
+}
+
 h3 {
     font-weight: 300;
     line-height: 1.1;
     font-size: 1.8rem;
     margin-top: 1.725rem;
     margin-bottom: 1.15rem
+}
+
+h4 {
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 1.4rem;
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem
 }
 
 h5 {
@@ -364,6 +381,7 @@ fieldset[disabled] button {
 }
 
 input[type*=date],
+input[type=email],
 input[type=number],
 input[type=password],
 input[type=search],
@@ -405,6 +423,7 @@ input[type=url]:disabled {
 }
 
 input[type*=date]::-moz-placeholder,
+input[type=email]::-moz-placeholder,
 input[type=number]::-moz-placeholder,
 input[type=password]::-moz-placeholder,
 input[type=search]::-moz-placeholder,
@@ -414,6 +433,7 @@ input[type=url]::-moz-placeholder {
 }
 
 input[type*=date]::-webkit-input-placeholder,
+input[type=email]::-webkit-input-placeholder,
 input[type=number]::-webkit-input-placeholder,
 input[type=password]::-webkit-input-placeholder,
 input[type=search]::-webkit-input-placeholder,
@@ -423,6 +443,7 @@ input[type=url]::-webkit-input-placeholder {
 }
 
 input[type*=date]:-ms-input-placeholder,
+input[type=email]:-ms-input-placeholder,
 input[type=number]:-ms-input-placeholder,
 input[type=password]:-ms-input-placeholder,
 input[type=search]:-ms-input-placeholder,
@@ -1707,6 +1728,7 @@ fieldset[disabled] .form.send.friend .action.remove {
 .cart-summary,
 .column .block-addbysku .sku,
 .columns .sidebar-additional,
+.columns .sidebar-main,
 .field .control._with-tooltip,
 .field.date .control,
 .opc-block-summary,
@@ -2694,6 +2716,16 @@ fieldset[disabled] .cart-container .form-cart .action.continue {
     list-style: none none
 }
 
+.columns .sidebar-main {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1
+}
+
 .columns .sidebar-additional {
     -webkit-flex-grow: 1;
     flex-grow: 1;
@@ -3149,27 +3181,6 @@ table>caption {
     display: none
 }
 
-.loading-mask {
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, .5)
-}
-
-.loading-mask .loader>img {
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 100
-}
-
 .loading-mask .loader>p {
     display: none
 }
@@ -3180,10 +3191,6 @@ body>.loading-mask {
 
 ._block-content-loading {
     position: relative
-}
-
-[data-role=main-css-loader] {
-    display: none
 }
 
 .fieldset:last-child {
@@ -3678,6 +3685,12 @@ fieldset[disabled] .action.primary {
     opacity: .5;
     cursor: default;
     pointer-events: none
+}
+
+.product.data.items {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 23px
 }
 
 .product.data.items>.item.title {
@@ -8329,6 +8342,11 @@ fieldset[disabled] .product-item-actions .actions-secondary>button.action {
     line-height: 1
 }
 
+.product.info.detailed {
+    clear: both;
+    margin-bottom: 30px
+}
+
 .product.info.detailed .additional-attributes {
     width: auto
 }
@@ -8343,6 +8361,11 @@ fieldset[disabled] .product-item-actions .actions-secondary>button.action {
 .product.info.detailed .additional-attributes>tfoot>tr>th,
 .product.info.detailed .additional-attributes>thead>tr>th {
     padding: 4px 34.5px 11.5px 0
+}
+
+.product-info-main .page-title-wrapper .page-title {
+    line-height: 1.66666667;
+    margin-bottom: 11.5px
 }
 
 .product-info-main .stock.available,
@@ -8380,6 +8403,10 @@ fieldset[disabled] .product-item-actions .actions-secondary>button.action {
 
 .product-info-main .price-box {
     margin-top: 11.5px
+}
+
+.product-info-main .product-reviews-summary .reviews-actions {
+    font-size: 1.4rem
 }
 
 .product-options-wrapper .fieldset-product-options-inner .legend {
@@ -8485,6 +8512,7 @@ fieldset[disabled] .product-item-actions .actions-secondary>button.action {
     text-align: center
 }
 
+.product-info-main .product-addto-links,
 .product-options-bottom .product-addto-links {
     margin: 23px 0
 }
@@ -10728,10 +10756,6 @@ fieldset[disabled] .minicart-wrapper .action.close {
     border-top: 1px solid #d1d1d1;
     display: block;
     margin: 11.5px 1.8rem
-}
-
-.column.main .block:last-child {
-    margin-bottom: 0
 }
 
 .block .title {
@@ -13043,8 +13067,17 @@ fieldset[disabled] .wishlist.window.popup .popup-actions .action.close {
     margin-bottom: 23px
 }
 
+.product-reviews-summary {
+    display: table;
+    margin: 11.5px 0 12px
+}
+
 .products.wrapper.list .product-reviews-summary {
     margin: 0 auto
+}
+
+.product-reviews-summary.empty {
+    margin-left: 0
 }
 
 .product-reviews-summary .rating-summary {
@@ -13053,6 +13086,16 @@ fieldset[disabled] .wishlist.window.popup .popup-actions .action.close {
     position: relative;
     text-align: left;
     vertical-align: middle
+}
+
+.product-reviews-summary .reviews-actions {
+    display: table-cell;
+    line-height: 28px;
+    vertical-align: middle
+}
+
+.product-reviews-summary .reviews-actions a {
+    margin-right: 5.75px
 }
 
 .customer-review .product-details {
@@ -16919,6 +16962,11 @@ fieldset[disabled] .block-event .slider-panel .slider .item .action.event {
 
     .navigation .submenu:not(:first-child) .level1.active>a {
         padding-left: 7px
+    }
+
+    .product.data.items {
+        margin: 0;
+        padding: 0
     }
 
     .product.data.items>.item.title {
@@ -23636,13 +23684,18 @@ only screen and (min-device-pixel-ratio:1.5) {
     }
 }
 
-html .page-layout-2columns-left .sidebar {
+html .page-layout-2columns-left .sidebar,
+html .page-layout-2columns-right .sidebar {
     width: 270px;
     padding: 0 !important
 }
 
 html .page-layout-2columns-left .column.main {
     width: calc(100% - 300px)
+}
+
+.page-layout-2columns-right .sidebar {
+    float: right !important
 }
 
 html .page-layout-3columns .sidebar {
@@ -23793,7 +23846,9 @@ html .page-layout-3columns .column.main {
 }
 
 @media (min-width:768px) and (max-width:991px) {
-    html .page-layout-2columns-left .sidebar {
+
+    html .page-layout-2columns-left .sidebar,
+    html .page-layout-2columns-right .sidebar {
         width: 200px;
         padding: 0 !important
     }
@@ -23804,7 +23859,9 @@ html .page-layout-3columns .column.main {
 }
 
 @media (min-width:481px) and (max-width:767px) {
-    .page-layout-2columns-left .sidebar {
+
+    .page-layout-2columns-left .sidebar,
+    .page-layout-2columns-right .sidebar {
         float: none !important
     }
 }
@@ -23812,7 +23869,8 @@ html .page-layout-3columns .column.main {
 @media (max-width:767px) {
 
     html .page-layout-2columns-left .column.main,
-    html .page-layout-2columns-left .sidebar {
+    html .page-layout-2columns-left .sidebar,
+    html .page-layout-2columns-right .sidebar {
         width: 100%;
         float: none;
         clear: both
@@ -23820,7 +23878,9 @@ html .page-layout-3columns .column.main {
 }
 
 @media (max-width:480px) {
-    .page-layout-2columns-left .sidebar {
+
+    .page-layout-2columns-left .sidebar,
+    .page-layout-2columns-right .sidebar {
         float: none !important
     }
 }
@@ -23875,12 +23935,42 @@ html .page-layout-3columns .column.main {
     display: none
 }
 
+.default-style .resp-tabs-list {
+    padding: 0;
+    margin: 0
+}
+
+.default-style .resp-tabs-list::after {
+    content: "";
+    display: block !important;
+    clear: both
+}
+
 .default-style .resp-tabs-list li {
-    cursor: pointer
+    background-color: #fff;
+    float: left;
+    display: block;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    font-size: 116.67%;
+    padding: 10px 20px !important;
+    margin: 0 -1px 0 0;
+    cursor: pointer;
+    position: relative
 }
 
 .default-style .resp-tabs-list li.active {
     background-color: #ddd
+}
+
+.default-style .resp-tabs-list li a {
+    color: inherit
+}
+
+.default-style .resp-tabs-container {
+    clear: both;
+    padding: 20px;
+    border: 1px solid #ddd
 }
 
 .vertical-style .resp-tabs-container {
@@ -23971,6 +24061,11 @@ html .page-layout-3columns .column.main {
     .vertical-style .resp-tabs-container .resp-tab-content {
         padding: 20px;
         min-height: auto
+    }
+
+    .default-style .resp-tabs-list li {
+        float: none;
+        margin: 0
     }
 }
 
@@ -24179,8 +24274,16 @@ picture.lazyload {
     height: 10px !important
 }
 
+.product-social-links {
+    text-align: unset
+}
+
 .data.item.content[aria-hidden=false] {
     display: block
+}
+
+.product.data.items .item.title>.switch {
+    padding: unset !important
 }
 
 .sticky-product-action {
@@ -32746,6 +32849,7 @@ select:focus {
 }
 
 input[type=datetime],
+input[type=email],
 input[type=number],
 input[type=password],
 input[type=search],
@@ -33107,7 +33211,8 @@ input[type=radio]:before {
     top: 4px
 }
 
-.sidebar-additional {
+.sidebar-additional,
+.sidebar-main {
     padding: 0 !important
 }
 
@@ -33415,6 +33520,15 @@ input[type=radio]:before {
     color: #222
 }
 
+.page-title {
+    font-size: 150%;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative
+}
+
 .banner-image {
     margin-bottom: 30px;
     overflow: hidden
@@ -33517,6 +33631,10 @@ input[type=radio]:before {
 
 .rating-summary .rating-result>span:before {
     color: #ffb400
+}
+
+.product-reviews-summary {
+    margin: 0
 }
 
 .product-reviews-summary .rating-summary {
@@ -33772,8 +33890,19 @@ canvas.spritespin-canvas:hover {
 }
 
 html .page-layout-1column .product-info-main,
-html .page-layout-2columns-left .product-info-main {
+html .page-layout-2columns-left .product-info-main,
+html .page-layout-2columns-right .product-info-main {
     width: calc(100% - 452px)
+}
+
+.product-info-main {
+    margin-bottom: 30px
+}
+
+.product-info-main .page-title-wrapper .page-title {
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 0 !important
 }
 
 .product-info-main .stock.available,
@@ -33787,6 +33916,10 @@ html .page-layout-2columns-left .product-info-main {
     color: #222
 }
 
+.product-info-main .product-info-stock-sku {
+    margin-bottom: 10px
+}
+
 .product-info-main .product.attribute.overview {
     margin: 0;
     clear: both
@@ -33794,6 +33927,12 @@ html .page-layout-2columns-left .product-info-main {
 
 .product-info-main .price-box {
     margin: 20px 0 25px
+}
+
+.product-info-main .product-social-links::after {
+    content: "";
+    display: block !important;
+    clear: both
 }
 
 .product-info-main .product-social-links .mailto.friend:before {
@@ -33816,6 +33955,7 @@ html .page-layout-2columns-left .product-info-main {
 }
 
 .product-info-main .box-tocart,
+.product-info-main .product-addto-links,
 .product-options-bottom .box-tocart,
 .product-options-bottom .product-addto-links {
     margin: 0
@@ -33843,6 +33983,14 @@ html .page-layout-2columns-left .product-info-main {
 .product-info-main .price-box .old-price .price,
 .product-options-bottom .price-box .old-price .price {
     font-size: 128.571% !important
+}
+
+.product.info.detailed {
+    margin-bottom: 0
+}
+
+.product.info.detailed .product.data.items {
+    margin-bottom: 0
 }
 
 .product.info.detailed .additional-attributes>tbody>tr>th {
@@ -34208,7 +34356,8 @@ body .page-wrapper>.page-bottom {
         width: 300px
     }
 
-    html .page-layout-2columns-left .product-info-main {
+    html .page-layout-2columns-left .product-info-main,
+    html .page-layout-2columns-right .product-info-main {
         width: calc(100% - 330px)
     }
 }
@@ -34218,7 +34367,8 @@ body .page-wrapper>.page-bottom {
         width: 250px
     }
 
-    html .page-layout-2columns-left .product-info-main {
+    html .page-layout-2columns-left .product-info-main,
+    html .page-layout-2columns-right .product-info-main {
         width: calc(100% - 280px)
     }
 }
@@ -34232,7 +34382,8 @@ body .page-wrapper>.page-bottom {
 @media (max-width:768px) {
 
     html .page-layout-2columns-left .column.main,
-    html .page-layout-2columns-left .sidebar {
+    html .page-layout-2columns-left .sidebar,
+    html .page-layout-2columns-right .sidebar {
         width: 100%;
         float: none
     }
@@ -34251,6 +34402,11 @@ body .page-wrapper>.page-bottom {
 
     .smcqp-modal-popup.modal-popup.modal-slide._show .modal-inner-wrap {
         min-height: unset
+    }
+
+    .product-info-main {
+        width: 100% !important;
+        float: none
     }
 
     .wishlist-index-index.account .toolbar .limiter {
