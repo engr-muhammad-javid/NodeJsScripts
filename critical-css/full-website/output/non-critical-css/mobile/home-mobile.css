@@ -1,0 +1,281 @@
+/* From https://miatlantic.co.uk/ */
+.ul-nostyle {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.title-mobile .block .block-title {
+    margin-bottom: 13px !important
+}
+
+.title-mobile .block .block-title strong {
+    font-size: 128.571% !important;
+    margin-bottom: 13px !important;
+    font-weight: 700 !important
+}
+
+.mobile-service {
+    border: 1px solid #e5e5e5;
+    padding: 10px 32px;
+    text-align: center
+}
+
+.mobile-service .item a {
+    text-transform: uppercase;
+    display: block;
+    padding: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.mobile-service .owl-theme .owl-nav {
+    margin: 0
+}
+
+.mobile-service .owl-theme .owl-nav [class*=owl-] {
+    background: 0 0;
+    border: none;
+    color: #222;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    top: 50%;
+    padding: 0;
+    margin: -15px 0 0
+}
+
+.mobile-service .owl-theme .owl-nav [class*=owl-].owl-next {
+    right: -25px
+}
+
+.mobile-service .owl-theme .owl-nav [class*=owl-].owl-next:before {
+    content: '\e929';
+    display: inline-block;
+    font-family: icomoon !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-size: 14px
+}
+
+.mobile-service .owl-theme .owl-nav [class*=owl-].owl-prev {
+    left: -25px
+}
+
+.mobile-service .owl-theme .owl-nav [class*=owl-].owl-prev:before {
+    content: '\e927';
+    display: inline-block;
+    font-family: icomoon !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-size: 14px
+}
+
+.mobile-categories {
+    background: url("static/version1753353925/frontend/Sm/smtheme_mobile/en_US/images/mobile-categories.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 23px 0 20px
+}
+
+.mobile-categories .block .block-title strong {
+    color: #fff !important
+}
+
+.mobile-categories ul {
+    margin: 0 -5px;
+    padding: 0;
+    list-style: none
+}
+
+.mobile-categories ul::after {
+    content: "";
+    display: block !important;
+    clear: both
+}
+
+.mobile-categories ul li {
+    margin: 0 0 10px;
+    padding: 0 5px;
+    float: left;
+    width: 50%
+}
+
+.mobile-categories ul li a {
+    position: relative;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 62px;
+    background-color: rgba(255, 255, 255, .13);
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px
+}
+
+.mobile-categories ul li a:hover {
+    background-color: #fff;
+    color: #222
+}
+
+.mobile-categories ul li a span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%
+}
+
+.mobile-categories ul li a span img {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%
+}
+
+.product-1-row .products-grid .product-item {
+    margin-bottom: 0
+}
+
+.title-mobile .mb-product-slider.stagepadding-slider-mobile .block .block-title {
+    margin-bottom: 0 !important
+}
+
+.mb-product-slider.stagepadding-slider-mobile .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 0
+}
+
+.mb-deal-full .products-grid .product-item-info {
+    border: none
+}
+
+.mb-deal-full .products-grid .product-item-info .product-item-details {
+    padding-top: 57px;
+    position: relative
+}
+
+.mb-deal-full .products-grid .product-item-info .product-item-details .deals-countdown {
+    background-color: #222;
+    height: 47px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.mb-deal-full .products-grid .product-item-info .product-item-details .deals-countdown .deals-time {
+    padding: 0;
+    margin: 0 5px;
+    background: 0 0;
+    border: none
+}
+
+.mb-deal-full .products-grid .product-item-info .product-item-details .deals-countdown .deals-time .num-time {
+    font-weight: 400;
+    font-size: 114.285%;
+    line-height: 1;
+    color: #fff;
+    margin: 8px 0 5px
+}
+
+.mb-deal-full .products-grid .product-item-info .product-item-details .deals-countdown .deals-time .title-time {
+    color: #aaa;
+    line-height: 1;
+    font-size: 10px;
+    text-transform: uppercase
+}
+
+.mb-deal-full .owl-theme .owl-dots .owl-dot span {
+    background-color: rgba(255, 255, 255, .5)
+}
+
+.mb-deal-full .owl-theme .owl-dots .owl-dot.active span,
+.mb-deal-full .owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff !important
+}
+
+.testimonial-mobile .testimonial-slider .client-image {
+    border: 5px solid #fff;
+    margin-bottom: 15px
+}
+
+.testimonial-mobile .testimonial-slider.testimonial-full-mobile .client-say {
+    font-size: 100%;
+    margin-bottom: 10px
+}
+
+.testimonial-mobile .testimonial-slider .client-name {
+    text-transform: capitalize
+}
+
+.mb-brand-mobile .item {
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px
+}
+
+@media (max-width:400px) {
+    .mobile-categories ul li {
+        width: 100%;
+        clear: both
+    }
+
+    .mb-deal-full .products-grid .product-item-info .product-item-details .deals-countdown .deals-time {
+        margin: 0 2px;
+        padding-top: 3px
+    }
+
+    .mb-deal-full .products-grid .product-item-info .product-item-details .deals-countdown .deals-time .num-time {
+        font-size: 85%
+    }
+/* From https://miatlantic.co.uk/customer/account/login/referer/aHR0cHM6Ly9taWF0bGFudGljLmNvLnVrL3doeS11cw~~/ */
+.mobile-categories {
+    background: url("../../../../../static/version1753353925/frontend/Sm/smtheme_mobile/en_US/images/mobile-categories.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 23px 0 20px
+}
+/* From https://miatlantic.co.uk/customer/account/create/ */
+.mobile-categories {
+    background: url("../../../static/version1753353925/frontend/Sm/smtheme_mobile/en_US/images/mobile-categories.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 23px 0 20px
+}
+/* From https://miatlantic.co.uk/checkout/cart */
+.mobile-categories {
+    background: url("../static/version1753353925/frontend/Sm/smtheme_mobile/en_US/images/mobile-categories.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 23px 0 20px
+}
+/* From https://miatlantic.co.uk/checkout/#shipping */
+.mobile-categories {
+    background: url("../../static/version1753353925/frontend/Sm/smtheme_mobile/en_US/images/mobile-categories.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 23px 0 20px
+}

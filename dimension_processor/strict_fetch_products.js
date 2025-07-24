@@ -2,14 +2,14 @@ import { pool } from './db_config.js';
 import { load } from 'cheerio';
 import fs from 'fs';
 
-// Helper to convert to cm or kg
+// Convert units to cm or kg
 function convertValue(value, type) {
   if (!value) return null;
 
   const match = value.match(/([\d.]+)\s*(cm|mm|inch|inches|in|kg|g|grams|lbs|pounds)?/i);
   if (!match) return value;
 
-  let [, num, unit] = match;
+  let [ , num, unit ] = match;
   num = parseFloat(num);
   if (isNaN(num)) return null;
 
@@ -26,6 +26,23 @@ function convertValue(value, type) {
   }
 
   return num;
+}
+
+// Extract values from a cheerio scope
+function extractFromScope($, scope) {
+  const extracted = { length: null, width: null, height: null, weight: null };
+
+  $(scope).find('.table-row').each((_, rowEl) => {
+    const label = $(rowEl).find('.table-cell').first().text().trim().toLowerCase();
+    const value = $(rowEl).find('.table-cell').last().text().trim();
+
+    if (label.includes('length')) extracted.length = convertValue(value, 'dimension');
+    if (label.includes('width')) extracted.width = convertValue(value, 'dimension');
+    if (label.includes('height')) extracted.height = convertValue(value, 'dimension');
+    if (label.includes('weight')) extracted.weight = convertValue(value, 'weight');
+  });
+
+  return extracted;
 }
 
 const results = [];
@@ -50,7 +67,8 @@ try {
     const { sku, technical_details } = row;
     const $ = load(technical_details);
 
-    const extracted = {
+    let packagingDataFound = false;
+    let extracted = {
       sku,
       length: null,
       width: null,
@@ -58,43 +76,29 @@ try {
       weight: null,
     };
 
-    let packagingFound = false;
-
-    // Find all .table-data sections
-    $('.table-data').each((_, section) => {
-      const header = $(section).find('.table-row-head .table-cell').first().text().trim().toLowerCase();
-      if (header.includes('packaging data')) {
-        packagingFound = true;
-
-        $(section).find('.table-row').each((_, rowEl) => {
-          const label = $(rowEl).find('.table-cell').first().text().trim().toLowerCase();
-          const value = $(rowEl).find('.table-cell').last().text().trim();
-
-          if (label.includes('length') && extracted.length === null) extracted.length = convertValue(value, 'dimension');
-          if (label.includes('width') && extracted.width === null) extracted.width = convertValue(value, 'dimension');
-          if (label.includes('height') && extracted.height === null) extracted.height = convertValue(value, 'dimension');
-          if (label.includes('weight') && extracted.weight === null) extracted.weight = convertValue(value, 'weight');
-        });
+    // Try extracting from "Packaging data" section
+    $('.spec-section').each((_, sectionEl) => {
+      const heading = $(sectionEl).find('h2, h3, .table-heading').first().text().trim().toLowerCase();
+      if (heading.includes('packaging')) {
+        extracted = { sku, ...extractFromScope($, sectionEl) };
+        packagingDataFound = true;
+        return false; // Break loop
       }
     });
 
-    // Fallback if "Packaging data" not found
-    if (!packagingFound) {
-      $('.table-row').each((_, rowEl) => {
-        const label = $(rowEl).find('.table-cell').first().text().trim().toLowerCase();
-        const value = $(rowEl).find('.table-cell').last().text().trim();
-
-        if (label.includes('length') && extracted.length === null) extracted.length = convertValue(value, 'dimension');
-        if (label.includes('width') && extracted.width === null) extracted.width = convertValue(value, 'dimension');
-        if (label.includes('height') && extracted.height === null) extracted.height = convertValue(value, 'dimension');
-        if (label.includes('weight') && extracted.weight === null) extracted.weight = convertValue(value, 'weight');
-      });
+    // If not found, extract from entire document
+    if (!packagingDataFound) {
+      extracted = { sku, ...extractFromScope($, $.root()) };
     }
 
-    results.push(extracted);
+    // Skip if all values are empty
+    const { length, width, height, weight } = extracted;
+    if (length || width || height || weight) {
+      results.push(extracted);
+    }
   }
 
-  // Write to CSV
+  // Save to CSV
   const csvData = [
     'sku,weight (kg),length (cm),width (cm),height (cm)',
     ...results.map(r =>
@@ -102,8 +106,8 @@ try {
     ),
   ].join('\n');
 
-  fs.writeFileSync('strict_products_output.csv', csvData);
-  console.log('CSV saved as strict_products_output.csv');
+  fs.writeFileSync('products_output.csv', csvData);
+  console.log('CSV saved as products_output.csv');
 } catch (err) {
   console.error('Error:', err);
 }

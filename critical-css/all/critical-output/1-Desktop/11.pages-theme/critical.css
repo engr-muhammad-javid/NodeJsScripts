@@ -1,0 +1,6 @@
+@media (min-width:1200px) and (max-width:1600px) {
+    .desktop-menu .sm_megamenu_wrapper_vertical_menu ul.sm_megamenu_menu>li>a.sm_megamenu_head {
+        padding: 5px 0;
+        font-size: 14px
+    }
+}

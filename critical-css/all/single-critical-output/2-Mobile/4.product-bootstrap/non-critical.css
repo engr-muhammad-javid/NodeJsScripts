@@ -1,0 +1,129 @@
+html {
+    -webkit-tap-highlight-color: transparent
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+hgroup,
+section {
+    display: block
+}
+
+h3,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit
+}
+
+dl,
+ol {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+b {
+    font-weight: bolder
+}
+
+small {
+    font-size: 80%
+}
+
+optgroup,
+select {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+select {
+    text-transform: none
+}
+
+[role=button] {
+    cursor: pointer
+}
+
+[type=reset] {
+    -webkit-appearance: button
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer
+}
+
+[hidden] {
+    display: none !important
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h3,
+h5,
+h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2
+}
+
+.h1 {
+    font-size: 2.5rem
+}
+
+.small,
+small {
+    font-size: 80%;
+    font-weight: 400
+}
+
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: ""
+}

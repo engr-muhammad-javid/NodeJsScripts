@@ -1,0 +1,129 @@
+@media all and (min-width:769px),
+print {
+    .block-search .label {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px
+    }
+
+    .block-search {
+        float: right;
+        padding-left: 15px;
+        position: relative;
+        width: 250px;
+        z-index: 4
+    }
+
+    .block-search .control {
+        border-top: 0;
+        margin: 0;
+        padding: 0 0 25px
+    }
+
+    .block-search .nested {
+        display: block;
+        padding-top: 5px;
+        position: absolute
+    }
+
+    .block-search input {
+        margin: 0;
+        padding-right: 35px;
+        position: static
+    }
+
+    .block-search input::-webkit-input-placeholder {
+        color: #999
+    }
+
+    .block-search input:-moz-placeholder {
+        color: #999
+    }
+
+    .block-search input::-moz-placeholder {
+        color: #999
+    }
+
+    .block-search input:-ms-input-placeholder {
+        color: #999
+    }
+
+    .block-search .action.search {
+        display: inline-block;
+        background-image: none;
+        background: 0 0;
+        -moz-box-sizing: content-box;
+        border: 0;
+        box-shadow: none;
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        text-shadow: none;
+        font-weight: 400;
+        padding: 5.75px 0;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        z-index: 1
+    }
+
+    .block-search .action.search>span {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px
+    }
+
+    .block-search .action.search:before {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 22px;
+        line-height: 22px;
+        color: #8f8f8f;
+        content: '\e615';
+        font-family: icons-blank-theme;
+        margin: 0;
+        vertical-align: top;
+        display: inline-block;
+        font-weight: 400;
+        overflow: hidden;
+        speak: none;
+        text-align: center
+    }
+
+    .search-autocomplete {
+        margin-top: 0
+    }
+
+    .minicart-wrapper {
+        margin-left: 13px
+    }
+
+    .minicart-wrapper .block-minicart {
+        right: -15px;
+        width: 390px
+    }
+
+    .page-header {
+        border: 0;
+        margin-bottom: 0
+    }
+
+    .logo {
+        margin: 0 auto 25px 0
+    }
+
+    .logo img {
+        max-height: inherit
+    }
+}
