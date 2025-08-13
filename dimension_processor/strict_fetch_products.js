@@ -30,13 +30,14 @@ function convertValue(value, type) {
 
 // Extract values from a cheerio scope
 function extractFromScope($, scope) {
-  const extracted = { length: null, width: null, height: null, weight: null };
+  const extracted = {depth: null, length: null, width: null, height: null, weight: null };
 
   $(scope).find('.table-row').each((_, rowEl) => {
     const label = $(rowEl).find('.table-cell').first().text().trim().toLowerCase();
     const value = $(rowEl).find('.table-cell').last().text().trim();
 
     if (label.includes('length')) extracted.length = convertValue(value, 'dimension');
+    if (label.includes('depth')) extracted.depth = convertValue(value, 'dimension');
     if (label.includes('width')) extracted.width = convertValue(value, 'dimension');
     if (label.includes('height')) extracted.height = convertValue(value, 'dimension');
     if (label.includes('weight')) extracted.weight = convertValue(value, 'weight');
@@ -70,6 +71,7 @@ try {
     let packagingDataFound = false;
     let extracted = {
       sku,
+      depth: null,
       length: null,
       width: null,
       height: null,
@@ -100,14 +102,14 @@ try {
 
   // Save to CSV
   const csvData = [
-    'sku,weight (kg),length (cm),width (cm),height (cm)',
+    'sku,weight (kg),depth (cm), length (cm),width (cm),height (cm)',
     ...results.map(r =>
-      `${r.sku},${r.weight ?? ''},${r.length ?? ''},${r.width ?? ''},${r.height ?? ''}`
+      `${r.sku},${r.weight ?? ''},${r.depth ?? ''},${r.length ?? ''},${r.width ?? ''},${r.height ?? ''}`
     ),
   ].join('\n');
 
-  fs.writeFileSync('products_output.csv', csvData);
-  console.log('CSV saved as products_output.csv');
+  fs.writeFileSync('strict_products_output_with_depth.csv', csvData);
+  console.log('CSV saved as strict_products_output_with_depth.csv');
 } catch (err) {
   console.error('Error:', err);
 }
